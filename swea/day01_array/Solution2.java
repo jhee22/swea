@@ -1,7 +1,7 @@
-package swea.Day01;
+package swea.day01_array;
 import java.util.Scanner;
 import java.io.FileInputStream;
-public class solution2 {
+public class Solution2 {
     	public static void main(String args[]) throws Exception
 	    {
             Scanner sc = new Scanner(System.in);

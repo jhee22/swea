@@ -1,8 +1,8 @@
-package swea.Day01;
+package swea.day01_array;
 
 import java.util.Scanner;
 
-public class solution3 {
+public class Solution3 {
     public static void main(String args[]) throws Exception
 	{
 		Scanner sc = new Scanner(System.in);
