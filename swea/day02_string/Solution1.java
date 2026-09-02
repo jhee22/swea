@@ -2,7 +2,7 @@ package swea.day02_string;
 // 회문 
 import java.util.Scanner; 
 import java.io.FileInputStream; 
-public class Solution {
+public class Solution1 {
     public static void main(String[] args) throws Exception{
         // dummy 
         Scanner sc = new Scanner(System.in); 
