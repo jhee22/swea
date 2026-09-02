@@ -12,9 +12,9 @@ public class Solution {
         for(int test_case = 1; test_case <= d; test_case++)
 		{
              // Input
-        // test : 8 x 8, actual : 10 x 10 matrix
+        // test : 8 x 8, actual : 100 x 100 matrix
         // 문자 입력 받기  
-        char[][] arr = new char[8][8]; 
+        char[][] arr = new char[100][100]; 
         for (int i = 0; i < arr.length; i++) {
             String row = sc.next(); 
             for (int j = 0; j < arr[0].length; j++) {
@@ -36,15 +36,30 @@ public class Solution {
             } 
 
             // 회문 Check 
-            for (int len = rowSb.length(); len >= 1; len--) {
-                for (int start = 0; start <= rowSb.length() - len; start++) {
-                    String temp = rowSb.substring(len, len-start); 
-                    System.out.println(temp);
+            // .reverse() 는 StringBuilder Method 
+            for (int last = rowSb.length(); last >= 1; last--) {
+                for (int start = 0; start <= rowSb.length() - last; start++) {
+                    int answer = 0; 
+                    String temp = rowSb.substring(start, start + last); 
+                    String reverse = new StringBuilder(temp).reverse().toString();
+                    if (temp.equals(reverse)) answer = temp.length(); 
+                    max = Math.max(max, answer); 
                 }
             }
 
-		}
-        }
+            for (int last = colSb.length(); last >= 1; last--) {
+                for (int start = 0; start <= colSb.length() - last; start++) {
+                    int answer = 0; 
+                    String temp = colSb.substring(start, start + last); 
+                    String reverse = new StringBuilder(temp).reverse().toString(); 
+                    if (temp.equals(reverse)) answer = temp.length(); 
+                    max = Math.max(max, answer);
+                }
+            }
 
+
+		}
+        System.out.println("#" + d + " " + max);
+        }
     }
 }
