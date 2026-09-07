@@ -6,7 +6,7 @@ public class Solution1 {
         // BufferedReader 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
          
-        for(int test_case = 1; test_case <= 2; test_case++) {
+        for(int test_case = 1; test_case <= 10; test_case++) {
             // input 
             LinkedList <Integer> list = new LinkedList<>(); 
             // StringTokenizer : 특정 한 줄에 붙어 있는 토큰 꺼내기 도구   
