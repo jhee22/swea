@@ -24,12 +24,17 @@ public class Solution3 {
                     maxCount = elem; 
                 }
             }
-
-            for (int i = 0; i < count.length; i++) {
+            
+            StringBuilder sb = new StringBuilder(); 
+            sb.append("#").append(test_case).append(" "); 
+            
+            for (int i = 2; i < n+m; i++) {
                 if (count[i] == maxCount) {
-                    System.out.println("#" + test_case + " " + i);
+                    sb.append(i).append(" "); 
                 }
             }
+            System.out.println(sb);
+            
 
         }
     }
