@@ -18,6 +18,8 @@ public class Solution {
             }
 
             Arrays.sort(arr); 
+
+            // 출력 부분 stringBuilder 로 하면 더 빠름 
             System.out.print("#" + test_case + " ");
             for (int elem : arr) {
                 System.out.print(elem + " ");
